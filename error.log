@@ -1,0 +1,64 @@
+2025-03-03 10:26:22,551 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 10:26:22,551 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 10:26:22,552 - INFO -  * Restarting with stat
+2025-03-03 10:26:23,017 - WARNING -  * Debugger is active!
+2025-03-03 10:26:23,024 - INFO -  * Debugger PIN: 135-975-502
+2025-03-03 10:30:02,133 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 10:30:02,133 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 10:30:02,134 - INFO -  * Restarting with stat
+2025-03-03 10:30:02,771 - WARNING -  * Debugger is active!
+2025-03-03 10:30:02,779 - INFO -  * Debugger PIN: 135-975-502
+2025-03-03 10:30:16,015 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 10:30:16,016 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 10:30:16,016 - INFO -  * Restarting with stat
+2025-03-03 10:30:16,466 - WARNING -  * Debugger is active!
+2025-03-03 10:30:16,471 - INFO -  * Debugger PIN: 135-975-502
+2025-03-03 10:36:11,523 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 10:36:11,523 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 10:36:11,524 - INFO -  * Restarting with stat
+2025-03-03 10:36:11,983 - WARNING -  * Debugger is active!
+2025-03-03 10:36:11,989 - INFO -  * Debugger PIN: 135-975-502
+2025-03-03 10:38:22,387 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-03 10:38:22,387 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-03 10:38:22,388 - INFO -  * Restarting with stat
+2025-03-03 10:38:22,855 - WARNING -  * Debugger is active!
+2025-03-03 10:38:22,862 - INFO -  * Debugger PIN: 135-975-502
+2025-03-03 10:38:24,102 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "GET / HTTP/1.1" 200 -
+2025-03-03 10:38:24,107 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/bootstrap-icons/bootstrap-icons.css HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,111 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/aos/aos.css HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,114 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,114 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/swiper/swiper-bundle.min.css HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,115 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/glightbox/css/glightbox.min.css HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,116 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,118 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/php-email-form/validate.js HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,119 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/aos/aos.js HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,120 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/typed.js/typed.umd.js HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,121 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/purecounter/purecounter_vanilla.js HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,122 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/waypoints/noframework.waypoints.js HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,124 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/glightbox/js/glightbox.min.js HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,125 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/imagesloaded/imagesloaded.pkgd.min.js HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,128 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/isotope-layout/isotope.pkgd.min.js HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,128 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[33mGET /assets/vendor/swiper/swiper-bundle.min.js HTTP/1.1[0m" 404 -
+2025-03-03 10:38:24,133 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-03 10:38:24,133 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:24] "[36mGET /static/assets/BC.jpg HTTP/1.1[0m" 304 -
+2025-03-03 10:38:27,334 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:27] "GET /chatbot HTTP/1.1" 200 -
+2025-03-03 10:38:35,182 - INFO - 127.0.0.1 - - [03/Mar/2025 10:38:35] "[33mPOST /chatbot_response HTTP/1.1[0m" 404 -
+2025-03-03 10:39:09,440 - INFO - 127.0.0.1 - - [03/Mar/2025 10:39:09] "GET /check_risk HTTP/1.1" 200 -
+2025-03-03 10:39:09,453 - INFO - 127.0.0.1 - - [03/Mar/2025 10:39:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-03 10:39:19,611 - ERROR - Error in prediction: result.html
+2025-03-03 10:39:19,612 - INFO - 127.0.0.1 - - [03/Mar/2025 10:39:19] "POST /predict HTTP/1.1" 200 -
+2025-03-03 10:39:19,620 - INFO - 127.0.0.1 - - [03/Mar/2025 10:39:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-03 10:39:31,559 - ERROR - Error in prediction: result.html
+2025-03-03 10:39:31,560 - INFO - 127.0.0.1 - - [03/Mar/2025 10:39:31] "POST /predict HTTP/1.1" 200 -
+2025-03-03 10:39:31,569 - INFO - 127.0.0.1 - - [03/Mar/2025 10:39:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-03 10:39:43,732 - INFO -  * Detected change in '/Users/sahilsharma/Desktop/Final-BC/chatbot.py', reloading
+2025-03-03 10:39:43,942 - INFO -  * Restarting with stat
+2025-03-03 10:39:44,782 - WARNING -  * Debugger is active!
+2025-03-03 10:39:44,789 - INFO -  * Debugger PIN: 135-975-502
+2025-03-03 10:40:08,483 - INFO -  * Detected change in '/Users/sahilsharma/Desktop/Final-BC/app.py', reloading
+2025-03-03 10:40:08,643 - INFO -  * Restarting with stat

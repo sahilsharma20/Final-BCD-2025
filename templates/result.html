@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #e89cde; /* Soft lavender background */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px; /* Adjusted size */
+            width: 90%;
+            text-align: center;
+            transition: 0.3s ease-in-out;
+            border: 1.5px solid black;
+        }
+        h1 {
+            color: #b62e7c;
+            font-size: 26px; /* Balanced title size */
+            margin-bottom: 15px;
+        }
+        .result-box {
+            font-size: 22px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: inline-block;
+            width: 80%;
+        }
+        .malignant {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .benign {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            background: #b62e7c;
+            color: white;
+            border-radius: 6px;
+            transition: 0.3s ease-in-out;
+        }
+        .btn:hover {
+            background: #8f235f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <div class="result-box {% if result == 'Malignant (Cancerous)' %}malignant{% else %}benign{% endif %}">
+            {{ result }}
+        </div>
+        <br>
+        <a href="/" class="btn">Go Back</a>
+    </div>
+
+</body>
+</html>

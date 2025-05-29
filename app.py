@@ -3,26 +3,26 @@ import sqlite3  # Using SQLite for simplicity
 import numpy as np
 import pickle
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 
 # Load environment variables (API key, etc.)
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
+# load_dotenv()
+# api_key = os.getenv("OPENAI_API_KEY")
 
-if not api_key:
-    print("⚠️ ERROR: OpenAI API Key is missing! Check .env file.")
-else:
-    print(f"✅ OpenAI API Key Loaded: {api_key[:5]}********")
+# if not api_key:
+#     print("⚠️ ERROR: OpenAI API Key is missing! Check .env file.")
+# else:
+#     print(f"✅ OpenAI API Key Loaded: {api_key[:5]}********")
 
 
-import openai
-from chatbot import chatbot_response  # Import chatbot function
+# import openai
+# from chatbot import chatbot_response  # Import chatbot function
 
-# Set OpenAI API Key
-openai.api_key = os.getenv("OPENAI_API_KEY")
-if not openai.api_key:
-    print("⚠️ ERROR: OpenAI API Key is missing! Check .env file.")
+# # Set OpenAI API Key
+# openai.api_key = os.getenv("OPENAI_API_KEY")
+# if not openai.api_key:
+#     print("⚠️ ERROR: OpenAI API Key is missing! Check .env file.")
 
 # Load trained model 
 with open('Breast_cancer_model.pkl', 'rb') as model_file:

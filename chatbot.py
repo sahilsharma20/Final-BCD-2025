@@ -1,41 +1,67 @@
-import openai
+"""Optional informational chatbot used by the Flask application."""
+
+from __future__ import annotations
+
 import os
-from dotenv import load_dotenv
-from flask import Flask, request, jsonify
 
-app = Flask(__name__)  # Create the Flask app instance
+CHATBOT_INSTRUCTIONS = """
+You are the informational assistant for an educational breast tumor
+classification project.
 
-# ✅ Load the .env file
-load_dotenv()
+Rules:
+- Explain the software, dataset, input features, and general breast-cancer
+  awareness information in clear language.
+- Never diagnose a user or interpret personal symptoms as a diagnosis.
+- Never recommend treatment or medication.
+- State that the machine-learning prediction is educational and is not a
+  substitute for a qualified clinician, pathology, imaging, or screening.
+- For urgent or alarming symptoms, advise the user to contact a qualified
+  healthcare professional or local emergency service.
+- Keep responses concise and avoid overstating model accuracy.
+""".strip()
 
-# ✅ Get API key from environment
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
-# ✅ Check if API key is loaded properly
-if not openai.api_key:
-    raise ValueError("⚠️ ERROR: OpenAI API Key is missing! Check .env file.")
+def chatbot_response(user_message: str) -> tuple[str, int]:
+    """Return an OpenAI response when optional configuration is available."""
+    message = user_message.strip()
 
+    if not message:
+        return "Please enter a message.", 400
 
-@app.route('/chatbot_response', methods=['POST'])
-# ✅ Fix: Define chatbot_response with a parameter
-def chatbot_response(user_message):
-    try:
-        if not user_message:
-            return "⚠️ No message provided."
+    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    model_name = os.getenv("OPENAI_MODEL", "").strip()
 
-        # OpenAI API request
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[{"role": "user", "content": user_message}]
+    if not api_key or not model_name:
+        return (
+            "The optional chatbot is not configured. "
+            "The prediction tool and educational pages remain available.",
+            503,
         )
-        
-        # Extract chatbot reply
-        return response.choices[0].message.content.strip()
 
-    except openai.error.OpenAIError as e:
-        return f"⚠️ OpenAI API Error: {str(e)}"
-    except Exception as e:
-        return f"⚠️ Server Error: {str(e)}"
+    try:
+        from openai import OpenAI
 
-if __name__ == "__main__":
-    app.run(debug=True)
+        client = OpenAI(api_key=api_key)
+        response = client.responses.create(
+            model=model_name,
+            instructions=CHATBOT_INSTRUCTIONS,
+            input=message,
+        )
+        output = response.output_text.strip()
+
+        if not output:
+            return "The chatbot returned an empty response. Please try again.", 502
+
+        return output, 200
+    except ImportError:
+        return (
+            "The optional chatbot dependency is not installed. "
+            "Install the project requirements and restart the app.",
+            503,
+        )
+    except Exception:
+        return (
+            "The chatbot is temporarily unavailable. "
+            "Please use the educational pages or try again later.",
+            502,
+        )
